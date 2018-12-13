@@ -1,5 +1,5 @@
 import React from 'react';
-import './gameconsole.css';
+import './index.css'
 
 const GameConsole = (props) => {
     let display = [...props.currentWord].map((char, idx)=>{

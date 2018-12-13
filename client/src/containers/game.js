@@ -131,18 +131,19 @@ class Game extends Component {
         } else { 
             return (
                 <div className="game">
-                    <h1>Hangman Game</h1>
-                    <Hangman
-                        gameTurn={this.state.numberOfGuesses}
-                    />
-                    <GameConsole 
-                        currentWord={this.state.currentWord}
-                        correctlyGuessed={this.state.correctlyGuessed}
-                    />
-                    <Keyboard
-                        guesses={this.state.guessed}
-                        onClick={this.handleClick}
-                    />
+                    <div className="game-wrapper">
+                        <Hangman
+                            gameTurn={this.state.numberOfGuesses}
+                        />
+                        <GameConsole 
+                            currentWord={this.state.currentWord}
+                            correctlyGuessed={this.state.correctlyGuessed}
+                        />
+                        <Keyboard
+                            guesses={this.state.guessed}
+                            onClick={this.handleClick}
+                        />
+                    </div>
                 </div>
             )
         }

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
+import './index.css'
 import man1 from '../assets/man1.png';
 import man2 from '../assets/man2.png';
 import man3 from '../assets/man3.png';
@@ -28,7 +29,7 @@ class Hangman extends Component {
     }
     render(){
         return (
-            <div>
+            <div className='hangman-img'>
                 {this.renderHangmanImage()}
             </div>
         )

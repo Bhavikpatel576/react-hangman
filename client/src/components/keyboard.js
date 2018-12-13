@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
-import './keyboard.css';
+import './index.css'
 
 class Keyboard extends Component {
     constructor(props){
