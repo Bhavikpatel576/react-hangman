@@ -1,0 +1,12 @@
+.keyboard {
+    display:flex;
+    flex-flow: wrap;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.keyboard li{
+    display: flex;
+    flex-direction: row;
+    flex-direction: row;
+}
