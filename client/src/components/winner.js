@@ -4,7 +4,7 @@ import React from 'react';
 
 const Winner = (props) => {
     const lost = props.gameResult
-    const caption = (lost ? "Sorry but you lost the game" : "You won! You should play again")
+    const caption = (lost ? `Sorry but you lost. The correct word is ${props.correctWord}` : "You won! You should play again")
     return (
         <div>
             <h2>Game Result:</h2>
