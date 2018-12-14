@@ -5,7 +5,7 @@ const Header = (props) => {
     return (
         <div className="nav-container">
             <nav>
-                <button id="About" onClick={props.onClick}>About</button>
+                <button id="Home" onClick={props.onClick}>Home</button>
                 <button id="Play" onClick={props.onClick}>Play</button>
                 <button id="ScoreBoard" onClick={props.onClick}>ScoreBoard</button>
                 <a href="https://github.com/Bhavikpatel576/react-hangman">Github</a>
