@@ -133,6 +133,7 @@ class Game extends Component {
                     <Winner
                         gameResult={this.state.lose}
                         onClick={this.handleReset}
+                        correctWord={this.state.currentWord}
                     />
                 </div>
             )
