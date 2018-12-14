@@ -70,7 +70,7 @@ class Game extends Component {
         if(this.state.numberOfGuesses === 0) {
             this.gameOver('lose');
         }
-        var characterList = [...this.state.currentWord]
+        const characterList = [...this.state.currentWord]
             .filter((value, index, self) => {
                 return self.indexOf(value) === index;
             });
@@ -79,10 +79,10 @@ class Game extends Component {
         } else {
             return null;
         }
-        
     }
 
     gameOver = (result) => {
+        this.props.handleSavedScores(this.state)
         if (result === 'lose') {
           this.setState({
             lose: true,
@@ -97,6 +97,7 @@ class Game extends Component {
         }
     };
 
+    /*if time permites, display the missing letters */
     showRest() {
         const missedLetterList = [...this.state.currentWord]
           .filter(char => !this.state.correctlyGuessed.includes(char));
@@ -113,7 +114,15 @@ class Game extends Component {
         this.setState({...this.baseState}, () => this.fetchWord());
     }
 
-    loading = () => (<div>Loading..</div>)
+    loading = () => {
+        return (
+            <div className="game">
+                <div className="game-wrapper">
+                    <h1>Loading..</h1>)
+                </div>
+            </div>
+        )
+    }   
 
     render(){
         if (this.state.loading){
@@ -121,29 +130,29 @@ class Game extends Component {
         } else if (this.state.gameOver){
             return (
                 <div>
-                    <div>The game is over</div>
                     <Winner
                         gameResult={this.state.lose}
+                        onClick={this.handleReset}
                     />
-                    <button onClick={this.handleReset}>Play Again?</button>
                 </div>
             )
         } else { 
             return (
-                <div className="game">
-                    <div className="game-wrapper">
-                        <Hangman
-                            gameTurn={this.state.numberOfGuesses}
-                        />
-                        <GameConsole 
-                            currentWord={this.state.currentWord}
-                            correctlyGuessed={this.state.correctlyGuessed}
-                        />
-                        <Keyboard
-                            guesses={this.state.guessed}
-                            onClick={this.handleClick}
-                        />
-                    </div>
+                <div>
+                <div className="game-info">
+                    <h2>Remaining Turns:{this.state.numberOfGuesses}</h2>
+                    <Hangman
+                        gameTurn={this.state.numberOfGuesses}
+                    />
+                </div>
+                <GameConsole 
+                    currentWord={this.state.currentWord}
+                    correctlyGuessed={this.state.correctlyGuessed}
+                />
+                <Keyboard
+                    guesses={this.state.guessed}
+                    onClick={this.handleClick}
+                />
                 </div>
             )
         }

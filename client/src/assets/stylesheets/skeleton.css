@@ -157,14 +157,15 @@
   
   /* Links
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  a {
+  /* a {
     color: #1EAEDB; }
   a:hover {
-    color: #0FA0CE; }
+    color: #0FA0CE; } */
   
   
   /* Buttons
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  a,
   .button,
   button,
   input[type="submit"],
@@ -187,7 +188,8 @@
     border: 1px solid #bbb;
     cursor: pointer;
     box-sizing: border-box; }
-  .button:hover,
+  a:hover, 
+  button:hover,
   button:hover,
   input[type="submit"]:hover,
   input[type="reset"]:hover,

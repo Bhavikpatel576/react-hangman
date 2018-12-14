@@ -11,3 +11,24 @@
     align-items: center;
     justify-items: center;
 }
+
+.game-wrapper h1{
+    color: black;
+}
+
+.game-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-info p,h2 {
+    display: flex;
+    flex: 1;
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-info .hangman-img {
+    flex: 2;
+}

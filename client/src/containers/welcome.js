@@ -1,13 +1,14 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react'
 
-export const Welcome = (props) => {
+const Welcome = (props) => {
     return (
         <div>
-            <p>
+            <h1>
                 Welcome to the game of Hangman. Would you like to play?
-            </p>
-            <Button onClick={props.startGame}>Yes</Button>
+            </h1>
+            <button onClick={()=>props.startGame('Play')}>Play Game</button>
         </div>
     )
 }
+
+export default Welcome
