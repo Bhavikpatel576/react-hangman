@@ -42,7 +42,7 @@ class App extends Component {
             case 'About':
                 return <Welcome startGame={this.playGame} onChange={this.onChange}/>
             case 'Play':
-                return <Game handleSavedScores={this.saveScore}/>
+                return <Game handleSavedScores={this.saveScore} difficulty={this.state.difficulty}/>
             case 'ScoreBoard':
                 return <Score scores={this.state.scores}/>
             default:

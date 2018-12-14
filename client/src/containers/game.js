@@ -8,7 +8,7 @@ import './game.css'
 
 const url = 'http://app.linkedin-reach.io/words'
 const path = '/api/words'
-const param = '?difficulty=1'
+const param = '?difficulty='
 
 class Game extends Component {       
     constructor(props){
@@ -26,7 +26,7 @@ class Game extends Component {
     }
 
     fetchWord = () => {
-        axios.get('/api/words' + param)
+        axios.get('/api/words' + param + this.props.difficulty)
         .then(response => {
           return response.data.split("\n")
         })

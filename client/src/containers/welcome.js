@@ -38,8 +38,8 @@ const Welcome = (props) => {
                     max={MAX}
                     handle={handle}
                 />
+                <button onClick={()=>props.startGame('Play')}>Click to Play</button>
             </div>
-            <button onClick={()=>props.startGame('Play')}>Click to Play</button>
         </div>
     )
 }
