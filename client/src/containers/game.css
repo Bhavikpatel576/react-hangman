@@ -32,3 +32,12 @@
 .game-info .hangman-img {
     flex: 2;
 }
+
+.welcome {
+    display: flex;
+    justify-items: center;
+}
+
+.rc-slider{
+    padding-bottom: 30px;
+}

@@ -10,11 +10,17 @@ class App extends Component {
         super(props)
         this.state = {
             scores: [],
+            difficulty: 1,
             viewWelcomeScreen: true,
             viewScoreBoardScreen: true,
             viewGameScreen: true,
             currentScreen: null
         }
+    }
+
+    onChange = (value) =>{
+        console.log(value)
+        this.setState({difficulty: value})
     }
 
     saveScore = (state) => {
@@ -34,13 +40,13 @@ class App extends Component {
     renderScreen = () =>{
         switch (this.state.currentScreen) {
             case 'About':
-                return <Welcome startGame={this.playGame}/>
+                return <Welcome startGame={this.playGame} onChange={this.onChange}/>
             case 'Play':
                 return <Game handleSavedScores={this.saveScore}/>
             case 'ScoreBoard':
                 return <Score scores={this.state.scores}/>
             default:
-                return <Welcome startGame={this.playGame}/>
+                return <Welcome startGame={this.playGame} onChange={this.onChange}/>
         }
     }
 
