@@ -22,7 +22,13 @@ https://linkedin-bhavik.herokuapp.com/
     ```
  A second route is created in order to make an API call to hit the endpoint that returns the requested list of words. 
 
-
+    ```javascript
+    app.get('/api/words', (req, res) => {
+    const difficulty = req.query.difficulty > 0 ? '?difficulty=' + req.query.difficulty : ''
+    axios.get('http://app.linkedin-reach.io/words' + difficulty)
+        //send info and catch any errors
+    });
+    ```
 
 #### Client Side Code
 
@@ -58,12 +64,6 @@ https://linkedin-bhavik.herokuapp.com/
 4. The game state is updated and renders the Winner container. 
 
 <img src="https://github.com/Bhavikpatel576/react-hangman/blob/master/assets/gameover.png" alt="render container" height="250" border="10"/>
-
-
-
-
-##### CSS
--Reset
 
 
 ## Usage
