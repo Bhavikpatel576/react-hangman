@@ -23,11 +23,11 @@ https://linkedin-bhavik.herokuapp.com/
  A second route is created in order to make an API call to hit the endpoint that returns the requested list of words. 
 
     ```javascript
-    app.get('/api/words', (req, res) => {
-    const difficulty = req.query.difficulty > 0 ? '?difficulty=' + req.query.difficulty : ''
-    axios.get('http://app.linkedin-reach.io/words' + difficulty)
-        //send info and catch any errors
-    });
+        app.get('/api/words', (req, res) => {
+        const difficulty = req.query.difficulty > 0 ? '?difficulty=' + req.query.difficulty : ''
+        axios.get('http://app.linkedin-reach.io/words' + difficulty)
+            //send info and catch any errors
+        });
     ```
 
 #### Client Side Code
