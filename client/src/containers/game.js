@@ -21,7 +21,6 @@ class Game extends Component {
             numberOfGuesses: 6,
             gameOver: false
         }
-        this.characters = "abcdefghijklmnopqrstuvwxyz12367890";
         this.baseState = this.state;
     }
 
