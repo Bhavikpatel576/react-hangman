@@ -5,9 +5,11 @@
 }
 
 .game-wrapper {
+    display: flex;
+    justify-content: center;
     background: white;
     width: 100%;
-    max-width: 750px;
+    max-width: 777px;
     align-items: center;
     justify-items: center;
 }
@@ -16,9 +18,16 @@
     color: black;
 }
 
+.game-wrapper table {
+    width: 100%;
+    font-size: 30px;
+}
+
 .game-info {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .game-info p,h2 {
@@ -36,6 +45,11 @@
 .welcome {
     display: flex;
     justify-items: center;
+}
+
+/* match margin to rc slider */
+.welcome h1 {
+    margin: 50px;
 }
 
 .rc-slider{

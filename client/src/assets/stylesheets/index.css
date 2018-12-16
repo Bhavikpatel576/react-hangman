@@ -127,7 +127,7 @@ main {
     body {
         background-color: lightblue;
     }
-    .button, button {
+    .button, a, button {
         height: 18px;
         padding: 0 10px;
         color: #555;
